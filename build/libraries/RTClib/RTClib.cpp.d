@@ -1,4 +1,4 @@
-c:\Users\Ale\Documents\Arduino\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\build\libraries\RTClib\RTClib.cpp.o: \
+C:\Users\Ale\Documents\Arduino\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\build\libraries\RTClib\RTClib.cpp.o: \
  C:\Users\Ale\Documents\Arduino\libraries\RTClib\src\RTClib.cpp \
  C:\Users\Ale\Documents\Arduino\libraries\RTClib\src\RTClib.h \
  C:\Users\Ale\Documents\Arduino\libraries\Adafruit_BusIO/Adafruit_I2CDevice.h \

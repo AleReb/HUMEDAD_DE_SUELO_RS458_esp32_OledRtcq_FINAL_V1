@@ -1,4 +1,4 @@
-c:\Users\Ale\Documents\Arduino\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\build\libraries\EspSoftwareSerial\SoftwareSerial.cpp.o: \
+C:\Users\Ale\Documents\Arduino\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\build\libraries\EspSoftwareSerial\SoftwareSerial.cpp.o: \
  C:\Users\Ale\Documents\Arduino\libraries\EspSoftwareSerial\src\SoftwareSerial.cpp \
  C:\Users\Ale\Documents\Arduino\libraries\EspSoftwareSerial\src\SoftwareSerial.h \
  C:\Users\Ale\Documents\Arduino\libraries\EspSoftwareSerial\src\circular_queue/circular_queue.h \

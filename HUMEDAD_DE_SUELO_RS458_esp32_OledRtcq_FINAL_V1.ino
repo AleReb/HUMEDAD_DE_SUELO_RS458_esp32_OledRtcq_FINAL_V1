@@ -27,25 +27,9 @@
 #include <SoftwareSerial.h>
 #include <Wire.h>
 #include "RTClib.h"
-#include <U8g2lib.h>
 #include <Adafruit_NeoPixel.h>
-
-
-RTC_DS3231 myRTCB;
-
-
-
-#include "FS.h"
-#include "SD.h"
-#include "SPI.h"
-#include <SoftwareSerial.h>
-#include <Wire.h>
-#include "RTClib.h"
 #include <U8g2lib.h>
-#include <Adafruit_NeoPixel.h>
-
 RTC_DS3231 myRTCB;
-
 String fecha;
 String hora;
 ////pantalla

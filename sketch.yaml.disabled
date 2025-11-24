@@ -1,0 +1,19 @@
+profiles:
+  esp32dev:
+    fqbn: esp32:esp32:esp32:UploadSpeed=921600,CPUFreq=240,FlashFreq=80,FlashMode=qio,FlashSize=4M,PartitionScheme=default,DebugLevel=none,PSRAM=disabled,LoopCore=1,EventsCore=1,EraseFlash=none,JTAGAdapter=default
+    platforms:
+      - platform: esp32:esp32 (2.0.17)
+    libraries:
+      - EspSoftwareSerial (8.1.0)
+      - RTClib (2.1.4)
+      - Adafruit BusIO (1.17.3)
+      - Adafruit NeoPixel (1.12.2)
+      - U8g2 (2.34.22)
+    programmer: ""
+    port: COM3
+    port_config:
+      baudrate: "115200"
+      lineEnding: "\r\n"
+      bits: "8"
+      parity: none
+      stop_bits: one

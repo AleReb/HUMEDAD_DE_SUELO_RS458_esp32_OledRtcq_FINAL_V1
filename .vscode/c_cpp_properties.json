@@ -248,8 +248,8 @@
         "-DARDUINO_RUNNING_CORE=1",
         "-DARDUINO_EVENT_RUNNING_CORE=1",
         "-DARDUINO_USB_CDC_ON_BOOT=0",
-        "@c:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\build/build_opt.h",
-        "@c:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\build/file_opts",
+        "@C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\build/build_opt.h",
+        "@C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\build/file_opts",
         "-IC:\\Users\\Ale\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.17\\cores\\esp32",
         "-IC:\\Users\\Ale\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.17\\variants\\esp32",
         "-IC:\\Users\\Ale\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.17\\libraries\\FS\\src",
@@ -259,11 +259,11 @@
         "-IC:\\Users\\Ale\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.17\\libraries\\Wire\\src",
         "-IC:\\Users\\Ale\\Documents\\Arduino\\libraries\\RTClib\\src",
         "-IC:\\Users\\Ale\\Documents\\Arduino\\libraries\\Adafruit_BusIO",
-        "-IC:\\Users\\Ale\\Documents\\Arduino\\libraries\\U8g2\\src",
         "-IC:\\Users\\Ale\\Documents\\Arduino\\libraries\\Adafruit_NeoPixel",
-        "c:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\build\\sketch\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino.cpp",
+        "-IC:\\Users\\Ale\\Documents\\Arduino\\libraries\\U8g2\\src",
+        "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\build\\sketch\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino.cpp",
         "-o",
-        "c:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\build\\sketch\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino.cpp.o"
+        "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\build\\sketch\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino.cpp.o"
       ],
       "defines": [
         "HAVE_CONFIG_H",

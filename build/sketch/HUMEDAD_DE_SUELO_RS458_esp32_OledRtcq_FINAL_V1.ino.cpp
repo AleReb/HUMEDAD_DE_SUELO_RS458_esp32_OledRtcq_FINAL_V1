@@ -1,18 +1,37 @@
 #include <Arduino.h>
 #line 1 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+/*
+ * Proyecto: Sistema de Monitoreo de Humedad de Suelo con ESP32, RS485, OLED y RTC
+ * Autor: Alejandro Rebolledo
+ * Correo: arebolledo@udd.cl
+ * 
+ * Descripción:
+ * Este código implementa un sistema de monitoreo ambiental que lee datos de un sensor de humedad
+ * de suelo a través de Modbus RS485. Los datos (humedad, temperatura, voltaje de batería) se 
+ * muestran en una pantalla OLED, se almacenan en una tarjeta SD con marca de tiempo (RTC DS3231)
+ * y se envían por puerto serie. Incluye gestión de energía y recuperación de errores.
+ * 
+ * Licencia:
+ * Este proyecto está bajo la Licencia Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0).
+ * 
+ * DESCARGO DE RESPONSABILIDAD:
+ * El código se ofrece "tal cual", sin garantías de ningún tipo, explícitas o implícitas, 
+ * incluyendo pero no limitándose a las garantías de comerciabilidad, idoneidad para un propósito particular 
+ * y no infracción. En ningún caso el autor será responsable de reclamaciones, daños u otras responsabilidades,
+ * ya sea en una acción de contrato, agravio o de otro tipo, que surjan de, fuera de o en conexión con 
+ * el software o el uso u otros tratos en el software. El usuario utiliza este código y el hardware asociado 
+ * bajo su propio riesgo.
+ */
+
 #include "FS.h"
 #include "SD.h"
 #include "SPI.h"
 #include <SoftwareSerial.h>
 #include <Wire.h>
 #include "RTClib.h"
-#include <U8g2lib.h>
 #include <Adafruit_NeoPixel.h>
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-//rtc
-
+#include <U8g2lib.h>
 RTC_DS3231 myRTCB;
-
 String fecha;
 String hora;
 ////pantalla
@@ -67,25 +86,25 @@ bool primerloop = true;
 unsigned long lastRebootMillis = 0;
 const unsigned long rebootInterval = 4 * 60 * 60 * 1000;  // 4 horas en milisegundos
 
-#line 68 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+#line 87 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
 void checkReboot();
-#line 79 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+#line 98 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
 void checkSaveData();
-#line 86 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+#line 105 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
 void saveData();
-#line 95 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+#line 114 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
 void checkSensorRetry();
-#line 102 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+#line 121 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
 void setup();
-#line 146 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+#line 165 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
 void loop();
-#line 226 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+#line 245 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
 void data(byte* values);
-#line 237 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+#line 256 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
 void checkSensor();
-#line 262 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+#line 281 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
 void sendSerialMessage();
-#line 275 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+#line 294 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
 unsigned char calculateChecksum(const String& data);
 #line 2 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\sd.ino"
 void readFile(fs::FS &fs, const char *path);
@@ -101,7 +120,7 @@ void ROUTINE_REGISTRY();
 String getFecha(DateTime now);
 #line 99 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\sd.ino"
 String getHora(DateTime now);
-#line 68 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
+#line 87 "C:\\Users\\Ale\\Documents\\Arduino\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino"
 void checkReboot() {
   if (millis() - lastRebootMillis > rebootInterval) {
     lastRebootMillis = millis();

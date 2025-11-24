@@ -1,5 +1,5 @@
-c:\Users\Ale\Documents\Arduino\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\build\sketch\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino.cpp.o: \
- c:\Users\Ale\Documents\Arduino\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\build\sketch\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino.cpp \
+C:\Users\Ale\Documents\Arduino\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\build\sketch\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino.cpp.o: \
+ C:\Users\Ale\Documents\Arduino\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\build\sketch\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1.ino.cpp \
  C:\Users\Ale\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32/Arduino.h \
  C:\Users\Ale\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32/esp_arduino_version.h \
  C:\Users\Ale\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17/tools/sdk/esp32/include/freertos/include/freertos/FreeRTOS.h \
@@ -146,10 +146,10 @@ c:\Users\Ale\Documents\Arduino\HUMEDAD_DE_SUELO_RS458_esp32_OledRtcq_FINAL_V1\bu
  C:\Users\Ale\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32/esp32-hal.h \
  C:\Users\Ale\Documents\Arduino\libraries\RTClib\src/RTClib.h \
  C:\Users\Ale\Documents\Arduino\libraries\Adafruit_BusIO/Adafruit_I2CDevice.h \
+ C:\Users\Ale\Documents\Arduino\libraries\Adafruit_NeoPixel/Adafruit_NeoPixel.h \
  C:\Users\Ale\Documents\Arduino\libraries\U8g2\src/U8g2lib.h \
  C:\Users\Ale\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32/Print.h \
  C:\Users\Ale\Documents\Arduino\libraries\U8g2\src/U8x8lib.h \
  C:\Users\Ale\Documents\Arduino\libraries\U8g2\src/clib/u8x8.h \
  C:\Users\Ale\Documents\Arduino\libraries\U8g2\src/clib/u8g2.h \
- C:\Users\Ale\Documents\Arduino\libraries\U8g2\src/clib/u8x8.h \
- C:\Users\Ale\Documents\Arduino\libraries\Adafruit_NeoPixel/Adafruit_NeoPixel.h
+ C:\Users\Ale\Documents\Arduino\libraries\U8g2\src/clib/u8x8.h
